@@ -1,40 +1,30 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#000000">
-  <meta name="description" content="AXIOS. Tu trading, tus libros y tus notas en un solo lugar. Gratis para Android.">
-  <title>AXIOS</title>
-  <link rel="icon" href="logo.png">
-  <style>
-    :root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#000000;color:#f4f3ef}
-    *{box-sizing:border-box}body{margin:0}
-    .page{min-height:100vh;min-height:100svh;max-width:1120px;margin:auto;padding:36px 40px 24px;display:flex;flex-direction:column}
-    .brand{display:flex;align-items:center;gap:12px;font-size:19px;font-weight:650;letter-spacing:4px}
-    main{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 0 88px}
-    h1{font-size:clamp(44px,7vw,76px);font-weight:600;letter-spacing:-.055em;line-height:1.07;margin:0 0 24px}
-    .intro{max-width:340px;margin:0;font-size:17px;line-height:1.65;color:#999997;text-wrap:pretty}
-    .download{display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:0 34px;margin-top:36px;border-radius:999px;background:#f4f3ef;color:#121212;text-decoration:none;font-size:15px;font-weight:650;transition:transform .18s ease,background .18s ease}
-    .download:hover{background:#deddd8;transform:translateY(-2px)}.download:active{transform:scale(.97)}
-    a:focus-visible{outline:2px solid #f4f3ef;outline-offset:6px}
-    .meta{font-size:12px;letter-spacing:.02em;color:#777773;margin:16px 0 0}
-    footer{display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:11px;color:#777773;line-height:1.5}
-    footer a{color:inherit;text-decoration:none;padding:8px 0}footer a:hover{color:#f4f3ef}
-    @media(max-width:480px){.page{padding:28px 24px 18px}main{padding:64px 0}.intro{max-width:290px;font-size:16px}h1{font-size:clamp(40px,11.8vw,56px)}.download{min-height:56px}}
-    @media(prefers-reduced-motion:reduce){*{transition:none!important}.download:hover,.download:active{transform:none}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#000000">
+<meta name="description" content="AXIOS para Android. Practica con replay, registra tus operaciones y conecta las notas de tus libros. Gratis y local.">
+<title>AXIOS · Tu espacio</title><link rel="icon" href="logo.png"><link rel="preload" as="image" href="logo.png">
+<style>
+:root{color-scheme:dark;--paper:#f3f2ee;--muted:#8f9296;--panel:#151719;background:#000;color:var(--paper);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-synthesis:none}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}a{color:inherit}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}button:focus-visible,a:focus-visible,summary:focus-visible{outline:0;text-decoration:underline;text-underline-offset:6px}a,button{touch-action:manipulation}::selection{background:#d9dfd8;color:#000}
+.wrap{max-width:1120px;margin:auto;padding:28px 36px 22px}header{display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{display:flex;gap:12px;align-items:center;text-decoration:none;font-weight:650;letter-spacing:5px;font-size:16px}.brand img{width:38px;height:38px}.edition{font-size:11px;color:var(--muted);text-decoration:none;background:var(--panel);padding:10px 14px;border-radius:99px}
+.hero{min-height:calc(100svh - 145px);display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;padding:55px 0 40px}.eyebrow{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin:0 0 24px}h1{font-size:clamp(56px,6.5vw,86px);letter-spacing:-.065em;font-weight:600;line-height:1.03;margin:0}h1 span{display:block}.intro{font-size:17px;line-height:1.65;color:var(--muted);max-width:350px;margin:26px 0 0;text-wrap:pretty}.download{display:inline-flex;gap:24px;align-items:center;justify-content:center;margin-top:32px;padding:18px 25px;border-radius:99px;background:var(--paper);color:#000;text-decoration:none;font-size:14px;font-weight:650;min-height:56px;transition:transform .35s cubic-bezier(.16,1,.3,1),background .3s}.download svg{width:18px;height:18px;transition:transform .4s}.download:hover{transform:translateY(-3px);background:#fff}.download:hover svg{transform:translateY(3px)}.download:active{transform:scale(.96)}.meta{font-size:11px;color:#74777c;margin:16px 0 0;letter-spacing:.15px}.device{position:relative;margin:0 auto;background:#0d0e10;border-radius:38px;padding:10px;width:min(100%,300px);transform:rotate(2deg);box-shadow:0 26px 75px #111314;transition:transform .8s cubic-bezier(.16,1,.3,1)}.device:hover{transform:rotate(0) translateY(-6px)}.device img{display:block;width:100%;height:auto;border-radius:29px}.caption{color:#73777c;font-size:10px;letter-spacing:.1px;text-align:center;margin:22px 0 0}
+.note{display:flex;align-items:center;justify-content:space-between;gap:24px;background:var(--panel);border-radius:26px;padding:25px 28px;margin:30px 0 32px}.note h2{font-size:20px;letter-spacing:-.5px;font-weight:500;margin:0}.note p{font-size:12px;line-height:1.8;color:var(--muted);max-width:360px;margin:0}.bottom{display:flex;justify-content:space-between;align-items:center;gap:22px;color:#73777c;font-size:11px;padding:10px 0}.links{display:flex;align-items:center;gap:22px}.links a{text-decoration:none}.links a:hover{color:var(--paper)}details{max-width:540px;font-size:12px;line-height:1.8;color:var(--muted)}summary{cursor:pointer;list-style:none;padding:12px 0;color:#b9bcc0}summary::-webkit-details-marker{display:none}details p{margin:0 0 14px}details[open] summary{color:var(--paper)}
+.entrance{position:fixed;inset:0;z-index:10;display:grid;place-content:center;background:#000;pointer-events:none;animation:veil 1.9s cubic-bezier(.7,0,.2,1) both}.sigil{position:relative;width:180px;height:180px}.slice{position:absolute;inset:0;animation:assemble 1.05s cubic-bezier(.16,1,.3,1) both}.slice img{width:100%;height:100%}.slice:nth-child(1){clip-path:inset(0 0 75% 0);--x:130px;--r:16deg}.slice:nth-child(2){clip-path:inset(25% 0 50% 0);--x:-110px;--r:-14deg;animation-delay:.08s}.slice:nth-child(3){clip-path:inset(50% 0 25% 0);--x:100px;--r:11deg;animation-delay:.14s}.slice:nth-child(4){clip-path:inset(75% 0 0 0);--x:-90px;--r:-9deg;animation-delay:.2s}.intro-word{text-align:center;letter-spacing:10px;padding-left:10px;font-size:15px;font-weight:600;animation:word 1.2s cubic-bezier(.16,1,.3,1) both}.copy>*{animation:reveal .95s cubic-bezier(.16,1,.3,1) both;animation-delay:1.2s}.copy h1{animation-delay:1.28s}.copy .intro{animation-delay:1.38s}.copy .download{animation-delay:1.48s}.copy .meta{animation-delay:1.58s}.visual{animation:device-in 1.2s 1.45s cubic-bezier(.16,1,.3,1) both}header{animation:reveal .8s 1.2s both}.note,.bottom,details{animation:reveal 1s 1.7s both}
+@keyframes assemble{0%{opacity:0;transform:translateX(var(--x)) rotate(var(--r)) scaleY(.12)}55%{opacity:1}100%{opacity:1;transform:translateX(0) rotate(0) scaleY(1)}}@keyframes word{0%,30%{opacity:0;transform:translateY(26px);letter-spacing:20px}100%{opacity:1;transform:translateY(0);letter-spacing:10px}}@keyframes veil{0%,72%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}@keyframes reveal{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}@keyframes device-in{from{opacity:0;transform:translateY(80px) scale(.88) rotate(5deg)}to{opacity:1;transform:translateY(0) scale(1) rotate(0)}}
+@media(max-width:700px){.wrap{padding:22px 24px}.hero{display:flex;flex-direction:column;gap:54px;min-height:0;padding:64px 0 12px}.copy{text-align:center}.eyebrow{font-size:9px;margin-bottom:23px}h1{font-size:clamp(52px,14vw,72px)}.intro{font-size:15px;max-width:280px;margin:24px auto 0}.download{margin-top:26px}.meta{font-size:10px}.visual{width:100%}.device{width:278px;transform:rotate(0);border-radius:32px;padding:8px;box-shadow:0 20px 65px #131518}.device img{border-radius:26px}.note{flex-direction:column;align-items:flex-start;gap:12px;margin:35px 0 20px;padding:23px;border-radius:24px}.note h2{font-size:19px}.bottom{align-items:flex-start;line-height:1.7}.links{gap:16px}.brand{font-size:14px;gap:8px}.edition{font-size:10px}.brand img{width:34px;height:34px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.entrance{display:none}.device,.device:hover,.download:hover{transform:none}}
+</style>
 </head>
 <body>
-  <div class="page">
-    <header class="brand"><img src="logo.png" width="42" height="42" alt="">AXIOS</header>
-    <main>
-      <h1>Tu trading.<br>Tu espacio.</h1>
-      <p class="intro">Practica con replay. Guarda tus operaciones, tus libros y tus notas.</p>
-      <a class="download" href="https://github.com/emilianoogutierrez/axios-android/releases/download/v2.1.0-preview/AXIOS-2.1.0.apk">Descargar gratis</a>
-      <p class="meta">Android · 138.9 MB · Sin cuenta</p>
-    </main>
-    <footer><span>2.1.0 · Android</span><a href="licenses.txt">Créditos</a></footer>
-  </div>
-</body>
-</html>
+<div class="entrance" aria-hidden="true"><div class="sigil"><div class="slice"><img src="logo.png" alt=""></div><div class="slice"><img src="logo.png" alt=""></div><div class="slice"><img src="logo.png" alt=""></div><div class="slice"><img src="logo.png" alt=""></div></div><div class="intro-word">AXIOS</div></div>
+<div class="wrap">
+<header><a class="brand" href="#"><img src="logo.png" alt="">AXIOS</a><a class="edition" href="https://github.com/emilianoogutierrez/axios-android/releases/tag/v2.2.0">Android · 2.2</a></header>
+<main>
+<section class="hero" aria-labelledby="title"><div class="copy"><p class="eyebrow">Un lugar para todo tu proceso</p><h1 id="title"><span>Tu práctica.</span><span>Tu espacio.</span></h1><p class="intro">El gráfico, tu diario y tus libros.<br>Todo conectado. Todo contigo.</p><a class="download" href="https://github.com/emilianoogutierrez/axios-android/releases/download/v2.2.0/AXIOS-2.2.0.apk">Descargar AXIOS<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg></a><p class="meta">Gratis · Android · Sin cuenta · <span id="size">139.0 MB</span></p></div><div class="visual"><figure class="device"><img src="market.png" width="412" height="915" alt="Pantalla real de AXIOS con gráfico EUR/USD, replay, herramientas y posiciones de práctica"></figure><p class="caption">Replay histórico · Captura de la app</p></div></section>
+<section class="note"><h2>Aprender también es conectar.</h2><p>Una idea de un libro. Una operación. Cómo te sentías.<br>Tu contexto se guarda en tu dispositivo.</p></section>
+<details><summary>Cómo instalar AXIOS</summary><p>Descarga el APK y ábrelo desde Archivos. Si Android lo solicita, permite la instalación para la app que abrió el archivo. Instala AXIOS y elige tu nombre al entrar.</p><p>Android 7 o posterior. Si ya usas la versión Expo de AXIOS, instala esta actualización sobre ella para conservar tus datos.</p></details>
+</main>
+<footer class="bottom"><span>AXIOS 2.2.0<br>Hecha para tu proceso.</span><div class="links"><a href="https://github.com/emilianoogutierrez/axios-android/releases/tag/v2.2.0">Novedades</a><a href="licenses.txt">Créditos</a></div></footer>
+</div>
+</body></html>
